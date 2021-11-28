@@ -8,7 +8,11 @@ function App() {
         <main>
           <Dictionary />
         </main>
-        <footer className="text-center">Coded by Rachel Bell</footer>
+        <footer className="text-center">
+          <a href="https://github.com/rachelbell27/dictionary-app">
+            Coded by Rachel Bell
+          </a>
+        </footer>
       </div>
     </div>
   );
