@@ -7,22 +7,24 @@ export default function Results(props) {
   if (props.data != null) {
     return (
       <div>
-        <h2>
-          {props.data.word}{" "}
-          {props.data.phonetics.map(function (phonetic, index) {
-            return (
-              <span key={index}>
-                <Phonetic phonetic={phonetic} />
-              </span>
-            );
-          })}
-        </h2>
+        <section>
+          <h2>
+            <div>{props.data.word} </div>
+            {props.data.phonetics.map(function (phonetic, index) {
+              return (
+                <span key={index}>
+                  <Phonetic phonetic={phonetic} />
+                </span>
+              );
+            })}
+          </h2>
+        </section>
 
         {props.data.meanings.map(function (meaning, index) {
           return (
-            <div key={index}>
+            <section key={index}>
               <Meaning meaning={meaning} />
-            </div>
+            </section>
           );
         })}
       </div>

@@ -8,7 +8,6 @@ export default function Dictionary() {
   const [definition, setDefinition] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data[0].meanings[0].definitions[0].definition);
     setDefinition(response.data[0]);
   }
 
@@ -25,9 +24,12 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
-        <input type="search" autoFocus={true} onChange={updateKeyword} />
-      </form>
+      <section>
+        <h1>Search for any word:</h1>
+        <form onSubmit={search}>
+          <input type="search" autoFocus={true} onChange={updateKeyword} />
+        </form>
+      </section>
       <Results data={definition} />
     </div>
   );

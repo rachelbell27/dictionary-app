@@ -9,7 +9,10 @@ function App() {
           <Dictionary />
         </main>
         <footer className="text-center">
-          <a href="https://github.com/rachelbell27/dictionary-app">
+          <a
+            href="https://github.com/rachelbell27/dictionary-app"
+            className="footer-link"
+          >
             Coded by Rachel Bell
           </a>
         </footer>
